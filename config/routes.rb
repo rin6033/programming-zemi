@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   delete 'logout' => "sessions#destroy"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :users
+  resources :tweets, only: [:create, :edit, :update, :destroy]
 end
